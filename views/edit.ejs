@@ -1,0 +1,21 @@
+<div class="col-md-8 mx-auto mt-4">
+    <h2>Edit Post</h2>
+   <form action="/edit/<%= post._id %>?_method=PUT" method="POST">
+          <%- include('./partials/alert')%>
+          <div class="form-group">
+            <label for="">Author</label>
+            <input type="text"  value="<%= typeof post.author != 'undefined' ? post.author : '' %>" name="author" class='form-control'>
+          </div>
+          <div class="form-group">
+            <label for="">Post Title</label>
+            <input type="text"  value="<%= typeof post.author != 'undefined' ? post.title : '' %>" name="title" placeholder="" class='form-control'>
+         </div>
+         <div class="form-group">
+            <label for="">Post Body</label>
+            <textarea name="body" id="" cols="30" rows="10" class="form-control"><%= typeof post.body != 'undefined' ? post.body : '' %></textarea>
+         </div>
+         <div class="form-group">
+            <input type="submit" value="Submit"  placeholder="" class='btn btn-secondary'>
+         </div>
+   </form>
+</div>

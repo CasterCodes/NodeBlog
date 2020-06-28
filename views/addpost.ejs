@@ -1,0 +1,22 @@
+<div class="col-md-8 mx-auto mt-4">
+        <h2>Create a new Post</h2>
+       
+       <form action="/addpost" method="POST">
+              <%- include('./partials/alert')%>
+              <div class="form-group">
+                <label for="">Author</label>
+                <input type="text"  value="<%= typeof author != 'undefined' ? author : '' %>" name="author" class='form-control'>
+              </div>
+              <div class="form-group">
+                <label for="">Post Title</label>
+                <input type="text"  value="<%= typeof title != 'undefined' ? title : '' %>" name="title" placeholder="" class='form-control'>
+             </div>
+             <div class="form-group">
+                <label for="">Post Body</label>
+                <textarea name="body" id="" cols="30" rows="10" class="form-control"></textarea>
+             </div>
+             <div class="form-group">
+                <input type="submit" value="Submit"  placeholder="" class='btn btn-secondary'>
+             </div>
+       </form>
+</div>

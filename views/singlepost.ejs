@@ -1,0 +1,6 @@
+<div>
+      <h1><%= post.title %></h1>
+      <span class = "text-muted">Post Created by : <%= post.author%> On <strong><%= post.createdOn.toLocaleDateString() %></strong>
+        <a href="/" class="btn btn-secondary ml-2 btn-sm">All Posts</a>  <a href="/edit/<%= post._id %>" class="btn btn-info btn-sm">Edit</a></span>
+      <p class="my-2"><%- post.markdown %></p>
+</div>
